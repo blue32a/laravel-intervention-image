@@ -14,7 +14,7 @@ class ImageServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(ImageManager::class, function () {
+        $this->app->singleton(ImageManager::class, static function () {
             return new ImageManager(config('image.driver'));
         });
     }
@@ -25,7 +25,7 @@ class ImageServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../config/image.php' => config_path('image.php'),
+            __DIR__ . '/../config/image.php' => config_path('image.php'),
         ], 'intervention-image');
     }
 }
