@@ -1,0 +1,27 @@
+{
+    "name": "blue32a/laravel-intervention-image",
+    "description": "Bind Intervention Image to Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0",
+        "intervention/image": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blue32a\\Laravel\\Intervention\\Image\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blue32a\\Laravel\\Intervention\\Image\\ImageServiceProvider"
+            ]
+        }
+    }
+}
