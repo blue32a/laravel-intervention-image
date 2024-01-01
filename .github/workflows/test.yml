@@ -39,3 +39,6 @@ jobs:
 
     - name: Run linter
       run: composer run-script lint
+
+    - name: Run code sniffer
+      run: composer run-script cs
