@@ -26,6 +26,6 @@ class ImageServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/image.php' => config_path('image.php'),
-        ]);
+        ], 'intervention-image');
     }
 }
